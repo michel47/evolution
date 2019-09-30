@@ -1,0 +1,15 @@
+#
+
+git init
+git add index.htm
+git config user.name "Gradual Evolution"
+git config user.email evolution@gc-bank.org
+echo _site > .gitignore
+
+
+git commit -m "first commit"
+git remote add origin https://github.com/michel47/evolution.git
+git push -u origin master
+
+find . -name \*\.org -delete
+jekyll build
