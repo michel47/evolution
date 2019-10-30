@@ -4,8 +4,11 @@ git init
 git add index.htm
 git config user.name "Gradual Evolution"
 git config user.email evolution@gc-bank.org
-echo _site > .gitignore
-
+cat <<EOF > .gitignore
+_site
+.jekyll-cache
+EOF
+git add .gitignore
 
 git commit -m "first commit"
 git remote add origin https://github.com/michel47/evolution.git

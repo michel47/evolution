@@ -11,12 +11,16 @@ netname: cranky-swirles-a42f98
 <link href="https://cdn.statically.io/gh/iglake/cssjs/master/css/style.css" rel="stylesheet" type="text/css">
 -->
 <link href="https://www.google.com/s2/favicons?domain=framapad.org" rel="shortcut icon" type="image/png" media="all">
+{% if jekyll.environment != 'production' %}
+<link href="http://ocean:8088/GITrepo/iglake/cssjs/css/style.css" rel="stylesheet" type="text/css">
+{% else %}
 <link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@v1.3.5/css/style.css" rel="stylesheet" type="text/css">
+{% endif %}
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head><body>
+<div id="hero" class="first content"><h1>%title%</h1></div><br>
 <div id="rendered" class=content></div>
 <br>
-<div class="content" style="margin-top: 108px;">
 <div id=panel><!-- ---------------------------------------------- -->
 To edit this page 
 use
@@ -28,12 +32,11 @@ this web page.
 <br>
 <iframe style="display:none; height:560px;" id=fp name="embed" src="//mоtd.ml" width=100%></iframe>
 </div><!-- ---------------------------------------------- -->
+</div>
 <br>
 <div id=md style="display:none;"><!-- write your page here in markdown format -->
 </div><!-- end of page -->
 
-</div>
-</div>
 
 <br>source: <a href="#" class=include>file</a>.
  made w/ <a href="{{ framaid }}" target=_blank class=frama>♡</a>.
@@ -41,7 +44,8 @@ this web page.
 <!-- ------------------------------------------------------------ -->
 {% if jekyll.environment != 'production' %}
 <script> console.log('/!\\ NOT Production: {{jekyll.environment}}')</script>
-<script src=http://ocean:8088/js/inc-fp.js></script>
+<script src=http://ocean:8088/GITrepo/iglake/cssjs/js/src/inc-fp.js></script>
+<script src=http://ocean:8088/GITrepo/iglake/cssjs/js/src/config.js></script>
 {% else %}
 <script> console.log('// Jekyll Environment: {{jekyll.environment}}')</script>
 <!--
@@ -51,8 +55,8 @@ src=http://ocean.local:8088/GITrepo/iglake/cssjs/js/dist/inc-fp.js
 src=https://cdn.jsdelivr.net/gh/iglake/js@master/dist/inc-fp.js
 src=https://cdn.jsdelivr.net/gh/iglake/js@19f340a/dist/inc-fp.js
 -->
-<script
-src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/inc-fp.js
-></script>
+<script src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/inc-fp.js></script>
+<script src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/config.js></script>
 {% endif %}
 <!-- ------------------------------------------------------------ -->
+<script>CFG.File('config.json',callback('body'));</script>
