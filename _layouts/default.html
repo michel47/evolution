@@ -1,9 +1,3 @@
----
-framaid: evolution-pad
-jsrelease: 1.7
-netname: cranky-swirles-a42f98
-url: https://michel47.github.io/evolution/
----
 <!DOCTYPE html><html><head>
 <meta http-equiv="Access-Control-Allow-Origin" content="{{ site.url }}"/>
 <meta charset="utf8">
@@ -11,7 +5,7 @@ url: https://michel47.github.io/evolution/
  vim: nospell
 <link href="https://cdn.statically.io/gh/iglake/cssjs/master/css/style.css" rel="stylesheet" type="text/css">
 -->
-<link href="https://www.google.com/s2/favicons?domain=framapad.org" rel="shortcut icon" type="image/png" media="all">
+<link href="https://www.google.com/s2/favicons?domain=%domain%" rel="shortcut icon" type="image/png" media="all">
 {% if jekyll.environment != 'production' %}
 <link href="http://ocean:8088/GITrepo/iglake/cssjs/css/style.css" rel="stylesheet" type="text/css">
 {% else %}
@@ -21,24 +15,10 @@ url: https://michel47.github.io/evolution/
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head><body>
 <div id="hero" class="first content"><h1>%title%</h1></div><br>
-<div id="rendered" class=content></div>
-<br>
-<div id=panel><!-- ---------------------------------------------- -->
-To edit this page 
-use
-<input id=edit type=button onClick="toggle('fp')" value=edit>
-or 
-<a href="#" id=template target=_blank>framapad</a>, then
-<input id=edit type=button onClick="location.reload(true)" value=refresh>
-this web page.
-<br>
-<iframe style="display:none; height:560px;" id=fp name="embed" src="//mоtd.ml" width=100%></iframe>
-</div><!-- ---------------------------------------------- -->
-</div>
-<br>
-<div id=md style="display:none;"><!-- write your page here in markdown format -->
-</div><!-- end of page -->
 
+<div class=content>
+{{content}}
+</div>
 
 <br>source: <a href="https://github.com/michel47/evolution/" class=include>page</a>.
  made w/ <a href="http://mensuel.framapad.org/p/{{ page.framaid }}" target=_blank class=frama>♡</a> <a href=https://presence℠.tk>[...]</a>
@@ -50,15 +30,8 @@ this web page.
 <script src=http://ocean:8088/GITrepo/iglake/cssjs/js/src/config.js></script>
 {% else %}
 <script> console.log('// Jekyll Environment: {{jekyll.environment}}')</script>
-<!--
-src=http://127.0.0.1:8088/js/inc-fp.js
-src=http://iphs.ga/js/inc-fp.js
-src=http://ocean.local:8088/GITrepo/iglake/cssjs/js/dist/inc-fp.js
-src=https://cdn.jsdelivr.net/gh/iglake/js@master/dist/inc-fp.js
-src=https://cdn.jsdelivr.net/gh/iglake/js@19f340a/dist/inc-fp.js
--->
 <script src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/inc-fp.js></script>
 <script src=https://cdn.jsdelivr.net/gh/iglake/js@{{page.jsrelease}}/dist/config.js></script>
 {% endif %}
 <!-- ------------------------------------------------------------ -->
-<script>CFG.File('sites/%domain%.json',callback('body'));</script>
+<script>CFG.File('config.json',callback('body'));</script>
