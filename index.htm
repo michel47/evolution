@@ -1,7 +1,8 @@
 ---
 framaid: evolution-pad
-jsrelease: 19f340a
+jsrelease: 1.7
 netname: cranky-swirles-a42f98
+url: https://michel47.github.io/evolution/
 ---
 <!DOCTYPE html><html><head>
 <meta http-equiv="Access-Control-Allow-Origin" content="{{ site.url}}"/>
@@ -16,6 +17,7 @@ netname: cranky-swirles-a42f98
 {% else %}
 <link href="https://cdn.jsdelivr.net/gh/iglake/cssjs@v1.3.5/css/style.css" rel="stylesheet" type="text/css">
 {% endif %}
+<script> var framaid = "{{page.framaid}}"</script>
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
 </head><body>
 <div id="hero" class="first content"><h1>%title%</h1></div><br>
@@ -38,8 +40,8 @@ this web page.
 </div><!-- end of page -->
 
 
-<br>source: <a href="#" class=include>file</a>.
- made w/ <a href="{{ framaid }}" target=_blank class=frama>♡</a>.
+<br>source: <a href="https://github.com/michel47/evolution/" class=include>page</a>.
+ made w/ <a href="http://mensuel.framapad.org/p/{{ page.framaid }}" target=_blank class=frama>♡</a> <a href=https://presence℠.tk>[...]</a>
 
 <!-- ------------------------------------------------------------ -->
 {% if jekyll.environment != 'production' %}
