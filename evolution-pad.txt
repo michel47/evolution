@@ -1,0 +1,30 @@
+### %description%
+
+We are acknoledging some profound transformation,
+as we are given the tools to collaborate at large...
+
+This website is part of a distributed cloud which has
+no central organization nor server for it's delivery.
+
+we have to keep in mind that if we want us to be free
+from the control of a few, we need to participate in
+a truly peer-to-peer network build for us, and "operate" for us.
+
+In other words this means that we mutualize our "computing" ressources
+for serve our community, but running a "node" in the network
+as often as possible to share all content that matters to us all.
+
+Open Data and Common Goods are this way rendered available to us all.
+
+# hostless web-site
+
+This website can be accessed via multiple points of presence,
+and more importantly [locally](http://127.0.0.1:8080%dnslink%)
+
+
+and also from:
+* netlify: <%domain%>
+* ipfs: <https://gateway.ipfs.io%dnslink%>
+* cloudflare: <https://cloudflare-ipfs.com%dnslink%>
+
+
